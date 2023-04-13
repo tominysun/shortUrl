@@ -3,8 +3,8 @@
 /**
  * @Author: Ding Jianlong
  * @Date:   2019-03-20 22:40:10
- * @Last Modified by:   Ding Jianlong
- * @Last Modified time: 2019-03-20 23:52:20
+ * @Last Modified by:   Tominysun
+ * @Last Modified time: 2023-04-10 22:14:32
  */
 
 
@@ -66,7 +66,8 @@ function createId($len){
     $str = 'abcdefghijklmnopqrstuvwxyz0123456789';
     $key = '';
     for($i = 0;$i < $len;$i++){
-        $key .= $str{mt_rand(0,strlen($str)-1)};
+        $key .= $str[mt_rand(0,strlen($str)-1)];
+        //$key .= $str{mt_rand(0,strlen($str)-1)};php7.4以后弃用花括号数组写法
     }
     return $key;
 }
